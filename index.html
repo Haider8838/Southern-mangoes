@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southern Mangoes – Pakistan's Finest Mango Experience</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C8973A;
+  --gold-light:#E8B84B;
+  --gold-pale:#F5E6C0;
+  --green-dark:#1A3A1F;
+  --green:#2D5A27;
+  --green-light:#4A7C42;
+  --cream:#FAF6EE;
+  --cream-dark:#F0E8D4;
+  --brown:#6B3E1A;
+  --text-dark:#1A1008;
+  --text-mid:#4A3520;
+  --text-light:#8A7060;
+  --white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden}
+
+/* NAVBAR */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,58,31,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,151,58,0.3);padding:0 2rem}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-icon{width:38px;height:38px}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold-light);line-height:1.1}
+.nav-logo-text span{display:block;font-size:0.6rem;font-weight:400;letter-spacing:0.15em;color:rgba(232,184,75,0.7);text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-cta{background:var(--gold);color:var(--green-dark);padding:8px 20px;border-radius:4px;font-weight:600;font-size:0.8rem;letter-spacing:0.08em;text-decoration:none;text-transform:uppercase;transition:background 0.2s}
+.nav-cta:hover{background:var(--gold-light)}
+.nav-cart-btn{background:none;border:1.5px solid rgba(200,151,58,0.5);color:var(--gold-light);padding:7px 16px;border-radius:4px;cursor:pointer;font-size:0.8rem;display:flex;align-items:center;gap:6px;transition:all 0.2s}
+.nav-cart-btn:hover{border-color:var(--gold-light);background:rgba(200,151,58,0.1)}
+.cart-count{background:var(--gold);color:var(--green-dark);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700}
+
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(160deg,var(--green-dark) 0%,#0F2410 40%,#1A2E0A 70%,#0A1E05 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:68px}
+.hero-bg-pattern{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 50%);background-size:30px 30px}
+.hero-orb1{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(200,151,58,0.12) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none}
+.hero-orb2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(45,90,39,0.4) 0%,transparent 70%);bottom:-50px;left:-50px;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;padding:4rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
+.hero-eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);max-width:60px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.05;margin-bottom:1rem}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero-desc{font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.7);margin-bottom:2rem;max-width:480px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--green-dark);padding:14px 32px;border-radius:4px;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-decoration:none;text-transform:uppercase;transition:all 0.25s;border:none;cursor:pointer;display:inline-block}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,151,58,0.3)}
+.btn-secondary{background:transparent;color:rgba(255,255,255,0.9);padding:14px 32px;border-radius:4px;font-weight:600;font-size:0.85rem;letter-spacing:0.08em;text-decoration:none;text-transform:uppercase;border:1.5px solid rgba(200,151,58,0.4);transition:all 0.25s;cursor:pointer;display:inline-block}
+.btn-secondary:hover{border-color:var(--gold-light);color:var(--gold-light);transform:translateY(-2px)}
+.hero-badges{display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap}
+.hero-badge{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.6);font-weight:500}
+.hero-badge svg{width:16px;height:16px;color:var(--gold)}
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-mango-art{width:100%;max-width:460px;filter:drop-shadow(0 40px 80px rgba(200,151,58,0.2))}
+
+/* FLOATING MANGO ANIMATION */
+@keyframes floatMango{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-18px) rotate(2deg)}}
+@keyframes floatMango2{0%,100%{transform:translateY(-8px) rotate(3deg)}50%{transform:translateY(10px) rotate(-3deg)}}
+@keyframes shimmer{0%,100%{opacity:0.6}50%{opacity:1}}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeSlideRight{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.85)}to{opacity:1;transform:scale(1)}}
+@keyframes leafSway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes pulse-gold{0%,100%{box-shadow:0 0 0 0 rgba(200,151,58,0.4)}50%{box-shadow:0 0 0 12px rgba(200,151,58,0)}}
+
+.hero-inner{animation:fadeSlideUp 0.8s ease both}
+.hero h1{animation:fadeSlideUp 0.8s 0.1s ease both}
+
+/* TRUST BAND */
+.trust-band{background:var(--green-dark);border-top:1px solid rgba(200,151,58,0.2);border-bottom:1px solid rgba(200,151,58,0.2);padding:1.2rem 2rem}
+.trust-band-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:3rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.8);font-size:0.8rem;font-weight:500;letter-spacing:0.05em}
+.trust-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* SECTION COMMONS */
+section{padding:5rem 2rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{font-size:0.65rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--green-dark);line-height:1.15;margin-bottom:1rem}
+.section-title em{color:var(--gold);font-style:italic}
+.section-desc{font-size:0.95rem;line-height:1.75;color:var(--text-mid);max-width:560px}
+.divider-gold{width:60px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:2px;margin:1.2rem 0}
+
+/* VARIETIES / PRODUCTS */
+.products-section{background:var(--cream)}
+.products-header{text-align:center;margin-bottom:3.5rem}
+.products-header .section-desc{margin:0 auto}
+.products-header .divider-gold{margin:1.2rem auto}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.product-card{background:var(--white);border:1px solid rgba(200,151,58,0.15);border-radius:12px;overflow:hidden;transition:all 0.35s;position:relative}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(26,58,31,0.12);border-color:rgba(200,151,58,0.4)}
+.product-card.coming-soon{opacity:0.75}
+.product-badge{position:absolute;top:12px;right:12px;z-index:3;padding:4px 12px;border-radius:3px;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase}
+.badge-premium{background:var(--gold);color:var(--green-dark)}
+.badge-soon{background:rgba(26,58,31,0.85);color:rgba(255,255,255,0.9);border:1px solid rgba(200,151,58,0.3);display:flex;align-items:center;gap:5px}
+.badge-soon::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:shimmer 1.5s ease infinite}
+.product-img-wrap{height:200px;background:linear-gradient(135deg,#F5E6C0 0%,#E8D5A0 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.product-img-wrap svg{animation:floatMango 4s ease-in-out infinite}
+.product-card:nth-child(2) .product-img-wrap svg{animation:floatMango2 3.5s ease-in-out infinite}
+.product-img-bg{position:absolute;inset:0;opacity:0.07}
+.product-body{padding:1.5rem}
+.product-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--green-dark);margin-bottom:0.4rem}
+.product-origin{font-size:0.75rem;color:var(--text-light);letter-spacing:0.08em;margin-bottom:0.8rem;text-transform:uppercase;font-weight:500}
+.product-desc{font-size:0.85rem;line-height:1.65;color:var(--text-mid);margin-bottom:1.2rem}
+.product-prices{background:var(--cream);border-radius:8px;padding:1rem;margin-bottom:1.2rem}
+.price-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(200,151,58,0.15)}
+.price-row:last-child{border-bottom:none}
+.price-label{font-size:0.78rem;color:var(--text-mid);font-weight:500}
+.price-val{font-size:0.88rem;font-weight:700;color:var(--green-dark)}
+.add-to-cart{width:100%;background:var(--green-dark);color:var(--white);border:none;padding:11px 20px;border-radius:6px;font-weight:600;font-size:0.82rem;letter-spacing:0.05em;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif}
+.add-to-cart:hover{background:var(--green);transform:scale(1.01)}
+.add-to-cart svg{width:16px;height:16px}
+.coming-soon-overlay{background:linear-gradient(135deg,rgba(26,58,31,0.85),rgba(10,30,5,0.9));border-radius:8px;padding:14px;text-align:center;color:rgba(255,255,255,0.8);font-size:0.82rem;display:flex;align-items:center;justify-content:center;gap:10px}
+.coming-soon-overlay .cs-icon{font-size:1.2rem;animation:leafSway 2s ease-in-out infinite;display:inline-block}
+
+/* ABOUT / FARM */
+.about-section{background:var(--green-dark);position:relative;overflow:hidden}
+.about-bg{position:absolute;inset:0;opacity:0.03;background-image:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 40px),repeating-linear-gradient(0deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 40px)}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:2}
+.about-label{color:var(--gold);font-size:0.65rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:0.8rem}
+.about-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--white);line-height:1.15;margin-bottom:1.2rem}
+.about-title em{color:var(--gold-light);font-style:italic}
+.about-desc{font-size:0.93rem;line-height:1.85;color:rgba(255,255,255,0.72);margin-bottom:1.5rem}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.stat-box{text-align:center;padding:1.2rem;border:1px solid rgba(200,151,58,0.2);border-radius:8px;background:rgba(200,151,58,0.04)}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gold-light);display:block}
+.stat-lbl{font-size:0.7rem;color:rgba(255,255,255,0.55);letter-spacing:0.08em;text-transform:uppercase;margin-top:4px}
+.farm-features{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.farm-feat{background:rgba(255,255,255,0.04);border:1px solid rgba(200,151,58,0.15);border-radius:8px;padding:1.2rem;transition:border-color 0.2s}
+.farm-feat:hover{border-color:rgba(200,151,58,0.35)}
+.farm-feat-icon{font-size:1.4rem;margin-bottom:0.6rem}
+.farm-feat-title{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.3rem}
+.farm-feat-desc{font-size:0.75rem;color:rgba(255,255,255,0.5);line-height:1.6}
+
+/* HOW TO ORDER */
+.order-section{background:var(--cream-dark)}
+.order-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:3rem;position:relative}
+.order-steps::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold),var(--gold),transparent);opacity:0.3;z-index:0}
+.step-card{text-align:center;position:relative;z-index:1}
+.step-num{width:72px;height:72px;border-radius:50%;background:var(--green-dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--gold-light);transition:all 0.3s}
+.step-card:hover .step-num{background:var(--gold);color:var(--green-dark);transform:scale(1.08);animation:pulse-gold 1s ease infinite}
+.step-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--green-dark);margin-bottom:0.5rem}
+.step-desc{font-size:0.82rem;line-height:1.65;color:var(--text-mid)}
+
+/* PACKAGING */
+.pkg-section{background:var(--white)}
+.pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:3rem}
+.pkg-card{border:1px solid rgba(200,151,58,0.2);border-radius:12px;padding:2.5rem;text-align:center;transition:all 0.3s;position:relative;overflow:hidden}
+.pkg-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold))}
+.pkg-card:hover{border-color:var(--gold);box-shadow:0 16px 48px rgba(200,151,58,0.1);transform:translateY(-4px)}
+.pkg-icon-wrap{width:90px;height:90px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2.5rem;transition:transform 0.3s}
+.pkg-card:hover .pkg-icon-wrap{transform:scale(1.05) rotate(-3deg)}
+.pkg-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--green-dark);margin-bottom:0.5rem}
+.pkg-subtitle{font-size:0.75rem;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem}
+.pkg-desc{font-size:0.85rem;line-height:1.7;color:var(--text-mid);margin-bottom:1.5rem}
+.pkg-tag{display:inline-block;padding:4px 12px;background:var(--cream-dark);border-radius:3px;font-size:0.72rem;font-weight:600;color:var(--brown);letter-spacing:0.05em;margin:3px}
+
+/* ORDER FORM */
+.form-section{background:var(--green-dark);position:relative;overflow:hidden}
+.form-bg{position:absolute;inset:0;opacity:0.04;background-image:radial-gradient(circle at 20% 50%,var(--gold) 1px,transparent 1px),radial-gradient(circle at 80% 20%,var(--gold) 1px,transparent 1px);background-size:60px 60px}
+.form-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;position:relative;z-index:2}
+.form-info{color:var(--white)}
+.form-info .section-title{color:var(--white)}
+.form-info .section-title em{color:var(--gold-light)}
+.form-info .divider-gold{margin:1.2rem 0}
+.contact-items{margin-top:2rem;display:flex;flex-direction:column;gap:1.2rem}
+.contact-item{display:flex;align-items:center;gap:14px;padding:1rem 1.2rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,151,58,0.15);border-radius:8px;transition:border-color 0.2s}
+.contact-item:hover{border-color:rgba(200,151,58,0.35)}
+.contact-icon{width:38px;height:38px;border-radius:50%;background:rgba(200,151,58,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.contact-text{font-size:0.82rem;color:rgba(255,255,255,0.85);font-weight:500}
+.contact-text small{display:block;font-size:0.7rem;color:rgba(255,255,255,0.45);font-weight:400;margin-top:2px}
+.order-form{background:var(--white);border-radius:12px;padding:2.5rem;box-shadow:0 40px 80px rgba(0,0,0,0.3)}
+.form-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--green-dark);margin-bottom:0.4rem}
+.form-subtitle{font-size:0.8rem;color:var(--text-light);margin-bottom:2rem}
+.form-group{margin-bottom:1.2rem}
+.form-group label{display:block;font-size:0.75rem;font-weight:600;color:var(--text-mid);letter-spacing:0.05em;margin-bottom:6px;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 14px;border:1.5px solid rgba(200,151,58,0.25);border-radius:6px;font-size:0.88rem;font-family:'Inter',sans-serif;color:var(--text-dark);background:var(--cream);transition:border-color 0.2s,box-shadow 0.2s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,151,58,0.12)}
+.form-group select{cursor:pointer}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit{width:100%;background:var(--green-dark);color:var(--white);border:none;padding:14px;border-radius:6px;font-weight:700;font-size:0.88rem;letter-spacing:0.08em;cursor:pointer;transition:all 0.25s;font-family:'Inter',sans-serif;text-transform:uppercase;margin-top:0.5rem}
+.form-submit:hover{background:var(--green);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,58,31,0.3)}
+.form-note{font-size:0.72rem;color:var(--text-light);text-align:center;margin-top:0.8rem;line-height:1.5}
+
+/* CART SIDEBAR */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:2000;opacity:0;visibility:hidden;transition:all 0.3s;backdrop-filter:blur(4px)}
+.cart-overlay.open{opacity:1;visibility:visible}
+.cart-sidebar{position:fixed;top:0;right:-420px;width:420px;max-width:95vw;height:100vh;background:var(--white);z-index:2001;transition:right 0.35s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,0.2)}
+.cart-sidebar.open{right:0}
+.cart-header{padding:1.5rem;border-bottom:1px solid rgba(200,151,58,0.15);display:flex;align-items:center;justify-content:space-between;background:var(--green-dark)}
+.cart-header h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white)}
+.cart-close{background:none;border:none;color:rgba(255,255,255,0.7);cursor:pointer;font-size:1.4rem;line-height:1;padding:4px;transition:color 0.2s}
+.cart-close:hover{color:var(--gold-light)}
+.cart-body{flex:1;overflow-y:auto;padding:1.5rem}
+.cart-empty{text-align:center;padding:3rem 1rem;color:var(--text-light)}
+.cart-empty-icon{font-size:3rem;margin-bottom:1rem;display:block}
+.cart-item{display:flex;gap:12px;padding:1rem 0;border-bottom:1px solid rgba(200,151,58,0.12);align-items:start}
+.cart-item-icon{width:44px;height:44px;background:var(--cream);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.4rem}
+.cart-item-info{flex:1}
+.cart-item-name{font-weight:600;font-size:0.85rem;color:var(--text-dark)}
+.cart-item-pkg{font-size:0.75rem;color:var(--text-light);margin-top:2px}
+.cart-item-price{font-weight:700;color:var(--green-dark);font-size:0.88rem;margin-top:4px}
+.cart-item-qty{display:flex;align-items:center;gap:8px;margin-top:8px}
+.qty-btn{width:26px;height:26px;border-radius:4px;border:1px solid rgba(200,151,58,0.3);background:none;cursor:pointer;font-size:0.9rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s;color:var(--green-dark)}
+.qty-btn:hover{background:var(--green-dark);color:var(--white);border-color:var(--green-dark)}
+.qty-num{font-size:0.85rem;font-weight:600;min-width:20px;text-align:center;color:var(--text-dark)}
+.cart-remove{background:none;border:none;color:var(--text-light);cursor:pointer;font-size:0.8rem;margin-left:auto;transition:color 0.2s;align-self:start;padding:2px}
+.cart-remove:hover{color:#c0392b}
+.cart-footer{padding:1.5rem;border-top:1px solid rgba(200,151,58,0.15);background:var(--cream)}
+.cart-total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.cart-total-lbl{font-size:0.85rem;font-weight:600;color:var(--text-mid)}
+.cart-total-val{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--green-dark)}
+.cart-checkout-btn{width:100%;background:var(--gold);color:var(--green-dark);border:none;padding:13px;border-radius:6px;font-weight:700;font-size:0.88rem;cursor:pointer;transition:all 0.25s;font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:0.08em}
+.cart-checkout-btn:hover{background:var(--gold-light);transform:translateY(-2px)}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--green-dark);color:var(--white);padding:12px 24px;border-radius:8px;font-size:0.85rem;font-weight:500;z-index:3000;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);border:1px solid rgba(200,151,58,0.3);display:flex;align-items:center;gap:10px;white-space:nowrap}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast-icon{color:var(--gold-light);font-size:1rem}
+
+/* SUCCESS MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:3000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.modal-overlay.open{display:flex}
+.modal{background:var(--white);border-radius:16px;padding:3rem;max-width:460px;width:90%;text-align:center;position:relative;box-shadow:0 40px 80px rgba(0,0,0,0.3)}
+.modal-icon{font-size:3.5rem;margin-bottom:1rem}
+.modal h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--green-dark);margin-bottom:0.8rem}
+.modal p{font-size:0.88rem;line-height:1.7;color:var(--text-mid);margin-bottom:1.5rem}
+.modal-close-btn{background:var(--green-dark);color:var(--white);border:none;padding:11px 28px;border-radius:6px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.85rem}
+
+/* FOOTER */
+footer{background:#0A1805;padding:3rem 2rem 1.5rem;border-top:1px solid rgba(200,151,58,0.2)}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(200,151,58,0.1)}
+.footer-logo-block .nav-logo{display:inline-flex;margin-bottom:1rem}
+.footer-logo-block p{font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.7;max-width:240px}
+.footer-col-title{font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.footer-links a{font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:rgba(255,255,255,0.9)}
+.footer-contact-item{display:flex;align-items:start;gap:10px;font-size:0.78rem;color:rgba(255,255,255,0.55);margin-bottom:0.8rem;line-height:1.5}
+.footer-contact-icon{color:var(--gold);flex-shrink:0;margin-top:1px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.3)}
+.footer-social{display:flex;gap:12px}
+.social-btn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(200,151,58,0.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:0.85rem;text-decoration:none;transition:all 0.2s}
+.social-btn:hover{border-color:var(--gold);color:var(--gold-light);background:rgba(200,151,58,0.08)}
+
+/* SCROLL ANIMATIONS */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:2rem;text-align:center}
+  .hero-visual{display:none}
+  .about-inner{grid-template-columns:1fr}
+  .form-inner{grid-template-columns:1fr}
+  .pkg-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .order-steps::before{display:none}
+}
+@media(max-width:600px){
+  section{padding:3.5rem 1.2rem}
+  .form-row{grid-template-columns:1fr}
+  .trust-band-inner{gap:1.2rem}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:start}
+}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;background:#25D366;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.25s,box-shadow 0.25s;animation:pulse-gold 2s ease infinite}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,0.5)}
+.wa-float svg{width:28px;height:28px;fill:white}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="19" cy="19" r="18" fill="#1A3A1F" stroke="#C8973A" stroke-width="1.5"/>
+        <ellipse cx="19" cy="15" rx="7" ry="9" fill="#C8973A" opacity="0.9"/>
+        <ellipse cx="14" cy="18" rx="5" ry="7" fill="#E8B84B" opacity="0.7" transform="rotate(-20 14 18)"/>
+        <line x1="19" y1="24" x2="19" y2="30" stroke="#4A7C42" stroke-width="2" stroke-linecap="round"/>
+        <line x1="19" y1="27" x2="16" y2="24" stroke="#4A7C42" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="19" y1="27" x2="22" y2="25" stroke="#4A7C42" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <div class="nav-logo-text">Southern Mangoes<span>Pakistan's Finest</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#varieties">Varieties</a></li>
+      <li><a href="#about">Our Farm</a></li>
+      <li><a href="#packaging">Packaging</a></li>
+      <li><a href="#order">Order Now</a></li>
+    </ul>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button class="nav-cart-btn" onclick="openCart()">
+        🛒 Cart <span class="cart-count" id="cartCountNav">0</span>
+      </button>
+      <a href="#order" class="nav-cta">Order Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-orb1"></div>
+  <div class="hero-orb2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">South Punjab, Pakistan</div>
+      <h1>Nature's Finest<br><em>Mangoes,</em><br>Delivered Fresh</h1>
+      <p class="hero-desc">From the Bhutta Family orchards of South Punjab — generations of passionate farming, hand-picked at peak ripeness, delivered fresh to your door across Pakistan.</p>
+      <div class="hero-btns">
+        <a href="#varieties" class="btn-primary">Shop Mangoes</a>
+        <a href="#about" class="btn-secondary">Our Story</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><svg viewBox="0 0 16 16" fill="currentColor" style="color:var(--gold)"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>100% Organic</div>
+        <div class="hero-badge"><svg viewBox="0 0 16 16" fill="currentColor" style="color:var(--gold)"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Hand-Picked</div>
+        <div class="hero-badge"><svg viewBox="0 0 16 16" fill="currentColor" style="color:var(--gold)"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Delivery All Pakistan</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 420 420" class="hero-mango-art" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="mg1" cx="40%" cy="35%" r="60%">
+            <stop offset="0%" stop-color="#FFD166"/>
+            <stop offset="50%" stop-color="#F4A829"/>
+            <stop offset="100%" stop-color="#C8730A"/>
+          </radialGradient>
+          <radialGradient id="mg2" cx="45%" cy="30%" r="60%">
+            <stop offset="0%" stop-color="#FFE085"/>
+            <stop offset="55%" stop-color="#F5B842"/>
+            <stop offset="100%" stop-color="#D4841A"/>
+          </radialGradient>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#C8973A" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#C8973A" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="210" cy="210" r="170" fill="url(#glow)"/>
+        <!-- Mango 1 - large center -->
+        <ellipse cx="210" cy="185" rx="65" ry="90" fill="url(#mg1)" transform="rotate(-15 210 185)"/>
+        <ellipse cx="195" cy="165" rx="28" ry="40" fill="#FFE08A" opacity="0.45"/>
+        <!-- Stem -->
+        <path d="M220 110 Q235 85 245 70" stroke="#4A7C42" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- Leaf -->
+        <path d="M245 70 Q270 45 285 58 Q265 72 245 70Z" fill="#2D5A27"/>
+        <path d="M245 70 Q268 55 282 60" stroke="#4A7C42" stroke-width="1" fill="none"/>
+        <!-- Mango 2 - left -->
+        <ellipse cx="135" cy="240" rx="48" ry="67" fill="url(#mg2)" transform="rotate(25 135 240)"/>
+        <ellipse cx="124" cy="222" rx="20" ry="30" fill="#FFE8A0" opacity="0.4"/>
+        <path d="M128 183 Q118 162 115 150" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M115 150 Q98 128 88 136 Q105 142 115 150Z" fill="#2D5A27"/>
+        <!-- Mango 3 - right -->
+        <ellipse cx="290" cy="255" rx="44" ry="62" fill="url(#mg1)" transform="rotate(-20 290 255)"/>
+        <ellipse cx="278" cy="238" rx="18" ry="27" fill="#FFE08A" opacity="0.4"/>
+        <path d="M295 208 Q305 188 312 175" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M312 175 Q328 158 338 167 Q320 172 312 175Z" fill="#2D5A27"/>
+        <!-- Small leaves scattered -->
+        <path d="M160 150 Q175 135 190 142 Q173 148 160 150Z" fill="#3D7A35" opacity="0.7"/>
+        <path d="M265 170 Q278 155 292 163 Q276 168 265 170Z" fill="#3D7A35" opacity="0.7"/>
+        <!-- Gold shimmer dots -->
+        <circle cx="170" cy="310" r="4" fill="#C8973A" opacity="0.4"/>
+        <circle cx="250" cy="330" r="3" fill="#C8973A" opacity="0.3"/>
+        <circle cx="300" cy="300" r="5" fill="#C8973A" opacity="0.25"/>
+        <circle cx="140" cy="320" r="3" fill="#C8973A" opacity="0.3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAND -->
+<div class="trust-band">
+  <div class="trust-band-inner">
+    <div class="trust-item"><div class="trust-dot"></div>100% Organic Certified</div>
+    <div class="trust-item"><div class="trust-dot"></div>Bhutta Family Orchards</div>
+    <div class="trust-item"><div class="trust-dot"></div>South Punjab — Multan</div>
+    <div class="trust-item"><div class="trust-dot"></div>Nationwide Delivery</div>
+    <div class="trust-item"><div class="trust-dot"></div>Safe & Secure Packaging</div>
+    <div class="trust-item"><div class="trust-dot"></div>Hand-Picked at Peak</div>
+  </div>
+</div>
+
+<!-- VARIETIES -->
+<section class="products-section" id="varieties">
+  <div class="section-inner">
+    <div class="products-header reveal">
+      <div class="section-label">Our Varieties</div>
+      <h2 class="section-title">Pakistan's Most <em>Prized</em> Mangoes</h2>
+      <div class="divider-gold"></div>
+      <p class="section-desc">Each variety is grown in the fertile lands of South Punjab, nurtured by generations of expertise, and delivered fresh from our orchards to your home.</p>
+    </div>
+    <div class="products-grid" id="productGrid">
+
+      <!-- SINDHRI -->
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-badge badge-premium">★ Available Now</div>
+        <div class="product-img-wrap">
+          <svg width="150" height="150" viewBox="0 0 150 150">
+            <defs>
+              <radialGradient id="sn1" cx="38%" cy="30%" r="65%">
+                <stop offset="0%" stop-color="#FFE882"/>
+                <stop offset="55%" stop-color="#F5C429"/>
+                <stop offset="100%" stop-color="#C8850A"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="75" cy="78" rx="42" ry="58" fill="url(#sn1)"/>
+            <ellipse cx="62" cy="62" rx="18" ry="26" fill="#FFEF9A" opacity="0.5"/>
+            <path d="M80 28 Q90 12 98 5" stroke="#2D5A27" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M98 5 Q118 -8 126 6 Q108 8 98 5Z" fill="#2D5A27"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Sindhri</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">The "King of Mangoes" — famously large, golden-yellow, with a rich honey-sweet flavour and minimal fibre. Sindhri is loved across Pakistan for its exceptional taste and aroma.</p>
+          <div class="product-prices">
+            <div class="price-row"><span class="price-label">🪵 Crate 10kg (Approx.)</span><span class="price-val">Rs. 3,000/-</span></div>
+            <div class="price-row"><span class="price-label">📦 Premium Box 5kg</span><span class="price-val">Rs. 2,250/-</span></div>
+            <div class="price-row"><span class="price-label">📦 Premium Box 10kg</span><span class="price-val">Rs. 3,250/-</span></div>
+          </div>
+          <button class="add-to-cart" onclick="openPackageModal('Sindhri')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- DASHERI -->
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-badge badge-premium">★ Available Now</div>
+        <div class="product-img-wrap" style="background:linear-gradient(135deg,#EDF5C0 0%,#D4E890 100%)">
+          <svg width="150" height="150" viewBox="0 0 150 150">
+            <defs>
+              <radialGradient id="ds1" cx="42%" cy="32%" r="62%">
+                <stop offset="0%" stop-color="#E8F58A"/>
+                <stop offset="50%" stop-color="#C8E040"/>
+                <stop offset="100%" stop-color="#88B010"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="76" cy="80" rx="38" ry="55" fill="url(#ds1)" transform="rotate(10 76 80)"/>
+            <ellipse cx="63" cy="65" rx="16" ry="24" fill="#EEF89C" opacity="0.5"/>
+            <path d="M82 30 Q88 14 94 6" stroke="#2D5A27" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M94 6 Q112 -5 120 8 Q103 10 94 6Z" fill="#2D5A27"/>
+            <path d="M94 6 Q80 -2 76 10" stroke="#2D5A27" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M76 10 Q62 4 60 16 Q74 12 76 10Z" fill="#3D7A35" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Dasheri</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">Renowned for its distinct fragrance and smooth, fibre-free flesh. Dasheri mangoes are oblong, greenish-yellow, and incredibly juicy — a top favourite for mango lovers across Pakistan.</p>
+          <div class="product-prices">
+            <div class="price-row"><span class="price-label">🪵 Crate 10kg (Approx.)</span><span class="price-val">Rs. 3,000/-</span></div>
+            <div class="price-row"><span class="price-label">📦 Premium Box 5kg</span><span class="price-val">Rs. 2,250/-</span></div>
+            <div class="price-row"><span class="price-label">📦 Premium Box 10kg</span><span class="price-val">Rs. 3,250/-</span></div>
+          </div>
+          <button class="add-to-cart" onclick="openPackageModal('Dasheri')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- COMING SOON VARIETIES -->
+      <div class="product-card coming-soon reveal reveal-delay-1">
+        <div class="product-badge badge-soon">Coming Soon</div>
+        <div class="product-img-wrap" style="background:linear-gradient(135deg,#E8F0E0 0%,#D0E2C4 100%);filter:grayscale(0.3)">
+          <svg width="130" height="130" viewBox="0 0 130 130" opacity="0.6">
+            <ellipse cx="65" cy="68" rx="36" ry="50" fill="#B8D098"/>
+            <path d="M68 22 Q75 10 80 4" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M80 4 Q96 -4 102 8 Q88 10 80 4Z" fill="#4A7C42"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">White Chaunsa</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">Delicately sweet with a pale golden flesh and irresistible fragrance. One of Pakistan's most celebrated varieties — arriving very soon.</p>
+          <div class="coming-soon-overlay"><span class="cs-icon">🥭</span> Launching soon — stay tuned!</div>
+        </div>
+      </div>
+
+      <div class="product-card coming-soon reveal reveal-delay-2">
+        <div class="product-badge badge-soon">Coming Soon</div>
+        <div class="product-img-wrap" style="background:linear-gradient(135deg,#EAF0D8 0%,#D8E8C0 100%);filter:grayscale(0.3)">
+          <svg width="130" height="130" viewBox="0 0 130 130" opacity="0.6">
+            <ellipse cx="65" cy="68" rx="32" ry="52" fill="#A8C878" transform="rotate(-8 65 68)"/>
+            <path d="M70 20 Q78 6 84 0" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M84 0 Q100 -8 105 5 Q90 8 84 0Z" fill="#4A7C42"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Langra</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">Slightly tart, incredibly aromatic, and uniquely green even when ripe. Langra is a connoisseur's pick with a rich, complex flavour.</p>
+          <div class="coming-soon-overlay"><span class="cs-icon">🥭</span> Launching soon — stay tuned!</div>
+        </div>
+      </div>
+
+      <div class="product-card coming-soon reveal reveal-delay-3">
+        <div class="product-badge badge-soon">Coming Soon</div>
+        <div class="product-img-wrap" style="background:linear-gradient(135deg,#E0D8F0 0%,#C8C0E0 100%);filter:grayscale(0.4)">
+          <svg width="130" height="130" viewBox="0 0 130 130" opacity="0.6">
+            <ellipse cx="65" cy="68" rx="38" ry="52" fill="#8870B8"/>
+            <ellipse cx="52" cy="54" rx="14" ry="22" fill="#9A88C8" opacity="0.4"/>
+            <path d="M68 22 Q76 8 82 2" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M82 2 Q98 -6 104 6 Q89 9 82 2Z" fill="#4A7C42"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Black Chaunsa</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">Deep, intense sweetness with a dark golden-purple blush. Black Chaunsa is a premium variety with a thick, rich flesh that melts in the mouth.</p>
+          <div class="coming-soon-overlay"><span class="cs-icon">🥭</span> Launching soon — stay tuned!</div>
+        </div>
+      </div>
+
+      <div class="product-card coming-soon reveal reveal-delay-4">
+        <div class="product-badge badge-soon">Coming Soon</div>
+        <div class="product-img-wrap" style="background:linear-gradient(135deg,#F5E8D0 0%,#E8D0A8 100%);filter:grayscale(0.3)">
+          <svg width="130" height="130" viewBox="0 0 130 130" opacity="0.6">
+            <ellipse cx="65" cy="70" rx="40" ry="52" fill="#D4A860"/>
+            <ellipse cx="52" cy="56" rx="16" ry="24" fill="#E8C080" opacity="0.4"/>
+            <path d="M66 22 Q72 8 78 2" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M78 2 Q95 -6 100 7 Q86 10 78 2Z" fill="#4A7C42"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Nawabpuri</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">Named for nobility — Nawabpuri boasts a buttery texture and a sweetness that's royally balanced. A heritage variety of South Punjab.</p>
+          <div class="coming-soon-overlay"><span class="cs-icon">🥭</span> Launching soon — stay tuned!</div>
+        </div>
+      </div>
+
+      <div class="product-card coming-soon reveal reveal-delay-1">
+        <div class="product-badge badge-soon">Coming Soon</div>
+        <div class="product-img-wrap" style="background:linear-gradient(135deg,#F0EAE0 0%,#E0D4C0 100%);filter:grayscale(0.3)">
+          <svg width="130" height="130" viewBox="0 0 130 130" opacity="0.6">
+            <ellipse cx="65" cy="70" rx="35" ry="50" fill="#C8A870" transform="rotate(5 65 70)"/>
+            <path d="M66 24 Q70 10 75 4" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M75 4 Q90 -4 96 8 Q82 11 75 4Z" fill="#4A7C42"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Ratty Wala</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">A beloved local variety known for its bright colour and extra-sweet profile. Ratty Wala is a summer classic in South Punjab homes.</p>
+          <div class="coming-soon-overlay"><span class="cs-icon">🥭</span> Launching soon — stay tuned!</div>
+        </div>
+      </div>
+
+      <div class="product-card coming-soon reveal reveal-delay-2">
+        <div class="product-badge badge-soon">Coming Soon</div>
+        <div class="product-img-wrap" style="background:linear-gradient(135deg,#FFE0D8 0%,#F5C0B0 100%);filter:grayscale(0.3)">
+          <svg width="130" height="130" viewBox="0 0 130 130" opacity="0.6">
+            <ellipse cx="65" cy="68" rx="38" ry="54" fill="#E07860"/>
+            <ellipse cx="52" cy="52" rx="15" ry="23" fill="#F09080" opacity="0.4"/>
+            <path d="M67 18 Q75 4 82 -2" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M82 -2 Q98 -10 104 4 Q89 7 82 -2Z" fill="#4A7C42"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Laal Badshah</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">The "Red King" — a striking reddish-orange variety with an unbeatable balance of sweet and tangy. A showstopper at any table.</p>
+          <div class="coming-soon-overlay"><span class="cs-icon">🥭</span> Launching soon — stay tuned!</div>
+        </div>
+      </div>
+
+      <div class="product-card coming-soon reveal reveal-delay-3">
+        <div class="product-badge badge-soon">Coming Soon</div>
+        <div class="product-img-wrap" style="background:linear-gradient(135deg,#F5ECD0 0%,#E8D8A8 100%);filter:grayscale(0.3)">
+          <svg width="130" height="130" viewBox="0 0 130 130" opacity="0.6">
+            <ellipse cx="65" cy="72" rx="30" ry="44" fill="#B89048"/>
+            <ellipse cx="55" cy="60" rx="12" ry="18" fill="#D0B060" opacity="0.4"/>
+            <path d="M65 32 Q68 18 72 12" stroke="#4A7C42" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M72 12 Q85 4 90 14 Q78 16 72 12Z" fill="#4A7C42"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Desi</h3>
+          <div class="product-origin">🌿 South Punjab, Pakistan</div>
+          <p class="product-desc">The original wild mango of the subcontinent — small, intensely flavoured, and nostalgically sweet. Pure, unadulterated mango joy.</p>
+          <div class="coming-soon-overlay"><span class="cs-icon">🥭</span> Launching soon — stay tuned!</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / FARM -->
+<section class="about-section" id="about">
+  <div class="section-inner">
+    <div class="about-inner">
+      <div class="reveal">
+        <div class="about-label">Our Heritage</div>
+        <h2 class="about-title">The Bhutta Family<br>&amp; Their <em>Sacred Orchards</em></h2>
+        <p class="about-desc">Rooted deep in the fertile soil of South Punjab near Multan, the Bhutta family has nurtured mango orchards for generations. What began as a family tradition has blossomed into one of Pakistan's most trusted names in premium mango farming.</p>
+        <p class="about-desc">Our orchards sit on some of the richest agricultural land in the country — where the sun is generous, the soil is deep, and every mango tree tells a story of dedication, patience, and love for the craft.</p>
+        <div class="about-stats">
+          <div class="stat-box"><span class="stat-num">3+</span><span class="stat-lbl">Generations</span></div>
+          <div class="stat-box"><span class="stat-num">100%</span><span class="stat-lbl">Organic</span></div>
+          <div class="stat-box"><span class="stat-num">🇵🇰</span><span class="stat-lbl">All Pakistan</span></div>
+        </div>
+      </div>
+      <div class="farm-features reveal reveal-delay-2">
+        <div class="farm-feat">
+          <div class="farm-feat-icon">🌱</div>
+          <div class="farm-feat-title">Fertile Lands</div>
+          <div class="farm-feat-desc">Rich soil and perfect climate of South Punjab, ideal for world-class mangoes.</div>
+        </div>
+        <div class="farm-feat">
+          <div class="farm-feat-icon">🌿</div>
+          <div class="farm-feat-title">Naturally Grown</div>
+          <div class="farm-feat-desc">100% organic mangoes, grown with love, care, and no harmful chemicals.</div>
+        </div>
+        <div class="farm-feat">
+          <div class="farm-feat-icon">♻️</div>
+          <div class="farm-feat-title">Sustainable Farming</div>
+          <div class="farm-feat-desc">Eco-friendly practices for a greener tomorrow — responsible to the earth.</div>
+        </div>
+        <div class="farm-feat">
+          <div class="farm-feat-icon">👐</div>
+          <div class="farm-feat-title">Hand-Picked</div>
+          <div class="farm-feat-desc">Each mango selected at peak ripeness by experienced hands for the best experience.</div>
+        </div>
+        <div class="farm-feat">
+          <div class="farm-feat-icon">📦</div>
+          <div class="farm-feat-title">Packed Fresh</div>
+          <div class="farm-feat-desc">Packed straight from the orchard within hours, preserving freshness and flavour.</div>
+        </div>
+        <div class="farm-feat">
+          <div class="farm-feat-icon">🚚</div>
+          <div class="farm-feat-title">Delivered Safely</div>
+          <div class="farm-feat-desc">Nationwide delivery across Pakistan in premium packaging that protects every mango.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="order-section" id="how-to-order">
+  <div class="section-inner">
+    <div class="products-header reveal">
+      <div class="section-label">Simple Process</div>
+      <h2 class="section-title">How to <em>Order</em></h2>
+      <div class="divider-gold"></div>
+      <p class="section-desc">Getting our fresh mangoes to your door is quick and easy. Here's how it works:</p>
+    </div>
+    <div class="order-steps">
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Choose Your Variety</h3>
+        <p class="step-desc">Browse our available mango varieties above. Select Sindhri or Dasheri — more varieties coming soon!</p>
+      </div>
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Pick Your Package</h3>
+        <p class="step-desc">Select from our Crate (10kg) or Premium Box (5kg or 10kg) options based on your preference.</p>
+      </div>
+      <div class="step-card reveal reveal-delay-3">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Place Your Order</h3>
+        <p class="step-desc">Fill in the order form or contact us on WhatsApp. We confirm your order within hours.</p>
+      </div>
+      <div class="step-card reveal reveal-delay-4">
+        <div class="step-num">4</div>
+        <h3 class="step-title">Receive at Home</h3>
+        <p class="step-desc">Your mangoes are packed fresh and delivered to your doorstep anywhere in Pakistan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGING -->
+<section class="pkg-section" id="packaging">
+  <div class="section-inner">
+    <div class="products-header reveal">
+      <div class="section-label">Packaging Options</div>
+      <h2 class="section-title">Choose Your <em>Experience</em></h2>
+      <div class="divider-gold"></div>
+      <p class="section-desc">We offer two packaging options — traditional crates for everyday freshness, and premium gift boxes for a truly special experience.</p>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg-card reveal reveal-delay-1">
+        <div class="pkg-icon-wrap">🪵</div>
+        <h3 class="pkg-name">Crate Packaging</h3>
+        <div class="pkg-subtitle">Traditional &amp; Reliable</div>
+        <p class="pkg-desc">The classic wooden crate — trusted by fruit sellers across Pakistan. Sturdy, breathable, and perfect for keeping mangoes fresh during transit. Ideal for families and bulk orders.</p>
+        <div>
+          <span class="pkg-tag">10kg Capacity</span>
+          <span class="pkg-tag">Sturdy Wood</span>
+          <span class="pkg-tag">Best Value</span>
+          <span class="pkg-tag">Rs. 3,000/-</span>
+        </div>
+      </div>
+      <div class="pkg-card reveal reveal-delay-2">
+        <div class="pkg-icon-wrap">🎁</div>
+        <h3 class="pkg-name">Premium Box</h3>
+        <div class="pkg-subtitle">Elegant &amp; Gift-Ready</div>
+        <p class="pkg-desc">Our signature premium box — crafted to protect, preserve, and impress. Elegant design with Southern Mangoes branding, perfect for gifting or treating yourself to a superior mango experience.</p>
+        <div>
+          <span class="pkg-tag">5kg &amp; 10kg</span>
+          <span class="pkg-tag">Gift-Ready</span>
+          <span class="pkg-tag">Premium Design</span>
+          <span class="pkg-tag">From Rs. 2,250/-</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<section class="form-section" id="order">
+  <div class="section-inner">
+    <div class="form-bg"></div>
+    <div class="form-inner">
+      <div class="form-info reveal">
+        <div class="section-label">Place Your Order</div>
+        <h2 class="section-title" style="color:white">Fresh Mangoes,<br><em>Delivered</em> to You</h2>
+        <div class="divider-gold"></div>
+        <p style="font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.65);margin-bottom:1rem">Fill the order form and we'll get back to you shortly to confirm and arrange delivery anywhere in Pakistan.</p>
+        <div class="contact-items">
+          <a href="mailto:haiderali8987166@gmail.com" class="contact-item" style="text-decoration:none">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-text">haiderali8987166@gmail.com<small>Email us your order</small></div>
+          </a>
+          <a href="https://wa.me/923091043464" target="_blank" class="contact-item" style="text-decoration:none">
+            <div class="contact-icon">📱</div>
+            <div class="contact-text">+92 309 1043464<small>WhatsApp for quick orders</small></div>
+          </a>
+          <a href="tel:+923030718838" class="contact-item" style="text-decoration:none">
+            <div class="contact-icon">📞</div>
+            <div class="contact-text">+92 303 0718838<small>Call us directly</small></div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">South Punjab, Multan, Pakistan<small>Bhutta Family Orchards</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="order-form">
+          <h3 class="form-title">Place Your Order</h3>
+          <p class="form-subtitle">We'll confirm your order within a few hours</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" id="f-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="f-phone" placeholder="e.g. 0300-1234567" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="f-email" placeholder="your@email.com">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Mango Variety *</label>
+              <select id="f-variety" required>
+                <option value="">Select variety</option>
+                <option value="Sindhri">Sindhri</option>
+                <option value="Dasheri">Dasheri</option>
+                <option value="Mixed" disabled>More varieties coming soon...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Packaging *</label>
+              <select id="f-package" required>
+                <option value="">Select package</option>
+                <option value="Crate 10kg — Rs. 3,000">🪵 Crate 10kg — Rs. 3,000</option>
+                <option value="Premium Box 5kg — Rs. 2,250">📦 Premium Box 5kg — Rs. 2,250</option>
+                <option value="Premium Box 10kg — Rs. 3,250">📦 Premium Box 10kg — Rs. 3,250</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Quantity</label>
+              <input type="number" id="f-qty" placeholder="e.g. 2" min="1" value="1">
+            </div>
+            <div class="form-group">
+              <label>City *</label>
+              <input type="text" id="f-city" placeholder="e.g. Lahore, Karachi..." required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Delivery Address *</label>
+            <textarea id="f-address" placeholder="Full delivery address..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Special Instructions</label>
+            <textarea id="f-notes" placeholder="Any special requests or notes..." style="min-height:65px"></textarea>
+          </div>
+          <button class="form-submit" onclick="handleFormSubmit()">🥭 Place My Order</button>
+          <p class="form-note">By ordering, you agree to our terms. Delivery across Pakistan. We'll call to confirm before dispatch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo-block">
+        <a href="#" class="nav-logo">
+          <svg width="32" height="32" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="18" fill="#1A3A1F" stroke="#C8973A" stroke-width="1.5"/><ellipse cx="19" cy="15" rx="7" ry="9" fill="#C8973A" opacity="0.9"/><ellipse cx="14" cy="18" rx="5" ry="7" fill="#E8B84B" opacity="0.7" transform="rotate(-20 14 18)"/><line x1="19" y1="24" x2="19" y2="30" stroke="#4A7C42" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="27" x2="16" y2="24" stroke="#4A7C42" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="27" x2="22" y2="25" stroke="#4A7C42" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div class="nav-logo-text" style="font-size:1rem">Southern Mangoes<span>A Legacy in Every Mango</span></div>
+        </a>
+        <p>Pakistan's finest mango experience. From the Bhutta family orchards of South Punjab — organic, hand-picked, delivered fresh.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#varieties">Our Varieties</a></li>
+          <li><a href="#about">Our Farm</a></li>
+          <li><a href="#packaging">Packaging</a></li>
+          <li><a href="#how-to-order">How to Order</a></li>
+          <li><a href="#order">Place an Order</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Varieties</div>
+        <ul class="footer-links">
+          <li><a href="#varieties">Sindhri</a></li>
+          <li><a href="#varieties">Dasheri</a></li>
+          <li><a href="#varieties">White Chaunsa (Soon)</a></li>
+          <li><a href="#varieties">Langra (Soon)</a></li>
+          <li><a href="#varieties">Black Chaunsa (Soon)</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✉️</span>haiderali8987166@gmail.com</div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📱</span>+92 309 1043464</div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📞</span>+92 303 0718838</div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📍</span>South Punjab, Multan, Pakistan</div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📸</span>@southernmangoes</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Southern Mangoes — Bhutta Family Orchards, South Punjab, Pakistan. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="https://wa.me/923091043464" class="social-btn" target="_blank" title="WhatsApp">📱</a>
+        <a href="#" class="social-btn" title="Instagram">📸</a>
+        <a href="#" class="social-btn" title="Facebook">👤</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/923091043464" class="wa-float" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row">
+      <span class="cart-total-lbl">Total</span>
+      <span class="cart-total-val" id="cartTotal">Rs. 0</span>
+    </div>
+    <button class="cart-checkout-btn" onclick="checkoutCart()">Proceed to Order →</button>
+  </div>
+</div>
+
+<!-- PACKAGE SELECTION MODAL -->
+<div class="modal-overlay" id="pkgModal">
+  <div class="modal">
+    <div class="modal-icon">🥭</div>
+    <h3 id="pkgModalTitle">Select Package</h3>
+    <p style="margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-light)">Choose your preferred package size:</p>
+    <div id="pkgOptions" style="display:flex;flex-direction:column;gap:10px;margin-bottom:1.5rem"></div>
+    <button class="modal-close-btn" onclick="closePkgModal()" style="background:transparent;color:var(--text-light);border:1px solid rgba(0,0,0,0.15)">Cancel</button>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal">
+    <div class="modal-icon">🎉</div>
+    <h3>Order Placed!</h3>
+    <p>Thank you! Your order has been received. We'll contact you shortly to confirm and arrange delivery. Fresh mangoes are on their way! 🥭</p>
+    <button class="modal-close-btn" onclick="document.getElementById('successModal').classList.remove('open')">Done</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✓</span>
+  <span id="toastMsg">Added to cart!</span>
+</div>
+
+<script>
+// CART STATE
+let cart = [];
+let currentVariety = '';
+
+const prices = {
+  'Crate 10kg': 3000,
+  'Premium Box 5kg': 2250,
+  'Premium Box 10kg': 3250
+};
+
+// CART OPEN/CLOSE
+function openCart(){
+  document.getElementById('cartOverlay').classList.add('open');
+  document.getElementById('cartSidebar').classList.add('open');
+  renderCart();
+}
+function closeCart(){
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.getElementById('cartSidebar').classList.remove('open');
+}
+
+// PACKAGE MODAL
+function openPackageModal(variety){
+  currentVariety = variety;
+  document.getElementById('pkgModalTitle').textContent = 'Select Package — ' + variety;
+  const opts = document.getElementById('pkgOptions');
+  opts.innerHTML = '';
+  Object.entries(prices).forEach(([pkg, price]) => {
+    const btn = document.createElement('button');
+    btn.style.cssText = 'width:100%;padding:12px 16px;border:1.5px solid rgba(200,151,58,0.3);border-radius:8px;background:var(--cream);cursor:pointer;font-family:Inter,sans-serif;font-size:0.85rem;font-weight:600;color:var(--green-dark);display:flex;justify-content:space-between;align-items:center;transition:all 0.2s';
+    btn.innerHTML = '<span>' + (pkg.includes('Crate') ? '🪵' : '📦') + ' ' + pkg + '</span><span style="color:var(--gold);font-weight:700">Rs. ' + price.toLocaleString() + '/-</span>';
+    btn.onmouseover = () => { btn.style.borderColor = 'var(--gold)'; btn.style.background = 'var(--cream-dark)'; };
+    btn.onmouseout = () => { btn.style.borderColor = 'rgba(200,151,58,0.3)'; btn.style.background = 'var(--cream)'; };
+    btn.onclick = () => { addToCart(variety, pkg, price); closePkgModal(); };
+    opts.appendChild(btn);
+  });
+  document.getElementById('pkgModal').classList.add('open');
+}
+function closePkgModal(){
+  document.getElementById('pkgModal').classList.remove('open');
+}
+
+// ADD TO CART
+function addToCart(variety, pkg, price){
+  const existing = cart.find(i => i.variety === variety && i.pkg === pkg);
+  if(existing){ existing.qty++; }
+  else { cart.push({variety, pkg, price, qty:1}); }
+  updateCartCount();
+  showToast('🥭 ' + variety + ' (' + pkg + ') added to cart!');
+}
+
+function updateCartCount(){
+  const total = cart.reduce((s,i) => s + i.qty, 0);
+  document.getElementById('cartCountNav').textContent = total;
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// RENDER CART
+function renderCart(){
+  const body = document.getElementById('cartBody');
+  const footer = document.getElementById('cartFooter');
+  if(cart.length === 0){
+    body.innerHTML = '<div class="cart-empty"><span class="cart-empty-icon">🥭</span><p style="font-weight:600;color:var(--text-mid);margin-bottom:0.5rem">Your cart is empty</p><p style="font-size:0.8rem;color:var(--text-light)">Add some delicious mangoes above!</p></div>';
+    footer.style.display = 'none';
+    return;
+  }
+  footer.style.display = 'block';
+  body.innerHTML = cart.map((item, idx) => `
+    <div class="cart-item">
+      <div class="cart-item-icon">${item.pkg.includes('Crate') ? '🪵' : '📦'}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.variety}</div>
+        <div class="cart-item-pkg">${item.pkg}</div>
+        <div class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString()}/-</div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="changeQty(${idx},-1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${idx},1)">+</button>
+        </div>
+      </div>
+      <button class="cart-remove" onclick="removeFromCart(${idx})">✕ Remove</button>
+    </div>
+  `).join('');
+  const total = cart.reduce((s,i) => s + i.price * i.qty, 0);
+  document.getElementById('cartTotal').textContent = 'Rs. ' + total.toLocaleString() + '/-';
+}
+
+function changeQty(idx, delta){
+  cart[idx].qty = Math.max(1, cart[idx].qty + delta);
+  updateCartCount();
+  renderCart();
+}
+function removeFromCart(idx){
+  cart.splice(idx, 1);
+  updateCartCount();
+  renderCart();
+}
+
+function checkoutCart(){
+  if(cart.length === 0) return;
+  closeCart();
+  const orderSection = document.getElementById('order');
+  orderSection.scrollIntoView({behavior:'smooth'});
+  const variety = cart[0].variety;
+  const pkg = cart[0].pkg;
+  setTimeout(() => {
+    document.getElementById('f-variety').value = variety;
+    const pkgSelect = document.getElementById('f-package');
+    for(let opt of pkgSelect.options){
+      if(opt.value.includes(pkg.split('—')[0].trim())){ pkgSelect.value = opt.value; break; }
+    }
+    document.getElementById('f-qty').value = cart[0].qty;
+  }, 600);
+}
+
+// FORM SUBMIT
+function handleFormSubmit(){
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const variety = document.getElementById('f-variety').value;
+  const pkg = document.getElementById('f-package').value;
+  const city = document.getElementById('f-city').value.trim();
+  const address = document.getElementById('f-address').value.trim();
+  if(!name || !phone || !variety || !pkg || !city || !address){
+    showToast('⚠️ Please fill all required fields.');
+    return;
+  }
+  const qty = document.getElementById('f-qty').value || 1;
+  const notes = document.getElementById('f-notes').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  // Build WhatsApp message
+  const msg = encodeURIComponent(
+    `*New Order — Southern Mangoes* 🥭\n\n` +
+    `👤 Name: ${name}\n📞 Phone: ${phone}\n${email ? '✉️ Email: ' + email + '\n' : ''}` +
+    `\n*Order Details:*\n🥭 Variety: ${variety}\n📦 Package: ${pkg}\n🔢 Qty: ${qty}\n` +
+    `\n📍 City: ${city}\n🏠 Address: ${address}` +
+    (notes ? `\n📝 Notes: ${notes}` : '') +
+    `\n\n_Order placed via southernmangoes.com_`
+  );
+  window.open('https://wa.me/923091043464?text=' + msg, '_blank');
+  document.getElementById('successModal').classList.add('open');
+  // Clear form
+  ['f-name','f-phone','f-email','f-variety','f-package','f-city','f-address','f-notes'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('f-qty').value = 1;
+  cart = [];
+  updateCartCount();
+}
+
+// SCROLL REVEAL
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Close modals on outside click
+document.getElementById('pkgModal').addEventListener('click', function(e){
+  if(e.target === this) closePkgModal();
+});
+document.getElementById('successModal').addEventListener('click', function(e){
+  if(e.target === this) this.classList.remove('open');
+});
+</script>
+</body>
+</html>
